@@ -1,3 +1,5 @@
+import Posts from './components/Posts'
+
 export default function Home() {
   return (
     <main className="mx-auto px-6">
@@ -7,6 +9,8 @@ export default function Home() {
           I&apos;m <strong>Guilherme</strong>
         </span>
       </p>
+
+      <Posts />
     </main>
   )
 }
