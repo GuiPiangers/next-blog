@@ -13,6 +13,7 @@ function LinkIcon({ children, url, title }: Props) {
       title={title}
       className="text-white/80 hover:text-white/100"
       href={url}
+      target="_blank"
     >
       {children}
     </Link>

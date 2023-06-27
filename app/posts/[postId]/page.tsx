@@ -2,6 +2,7 @@ import getFormattedDate from '@/lib/getFormattedDate'
 import { getPostData, getSortedPostData } from '@/lib/posts'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import parse from 'html-react-parser'
 
 type Props = {
   params: { postId: string }
@@ -45,7 +46,7 @@ async function Post({ params }: Props) {
       <h1 className="mb-0 text-3xl">{title}</h1>
       <p>{formattedDate}</p>
       <article>
-        <section dangerouslySetInnerHTML={{ __html: contentHtml }} />
+        <section>{parse(contentHtml)}</section>
         <p>
           <Link href="/">&larr; Back to home</Link>
         </p>
